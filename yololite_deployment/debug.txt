@@ -1,0 +1,466 @@
+(venv) pi@raspberrypi:~/MNN-2.7.0 $ sudo ./build/quantized.out /home/pi/best_mnnd.mnn  /home/pi/best_mnnd_i8_debug.mnn /home/pi/best.json
+[01:18:56] /home/pi/MNN-2.7.0/tools/quantization/quantized.cpp:23: >>> modelFile: /home/pi/best_mnnd.mnn
+[01:18:56] /home/pi/MNN-2.7.0/tools/quantization/quantized.cpp:24: >>> preTreatConfig: /home/pi/best.json
+[01:18:56] /home/pi/MNN-2.7.0/tools/quantization/quantized.cpp:25: >>> dstFile: /home/pi/best_mnnd_i8_debug.mnn
+[01:18:56] /home/pi/MNN-2.7.0/tools/quantization/quantized.cpp:53: Calibrate the feature and quantize model...
+[01:18:56] /home/pi/MNN-2.7.0/tools/quantization/calibration.cpp:158: Use feature quantization method: KL
+[01:18:56] /home/pi/MNN-2.7.0/tools/quantization/calibration.cpp:159: Use weight quantization method: MAX_ABS
+[01:18:56] /home/pi/MNN-2.7.0/tools/quantization/calibration.cpp:179: feature_clamp_value: 127
+[01:18:56] /home/pi/MNN-2.7.0/tools/quantization/calibration.cpp:180: weight_clamp_value: 127
+The device support i8sdot:0, support fp16:0, support i8mm: 0
+The device support i8sdot:0, support fp16:0, support i8mm: 0
+[01:18:56] /home/pi/MNN-2.7.0/tools/quantization/Helper.cpp:111: used image num: 320
+[01:18:56] /home/pi/MNN-2.7.0/tools/quantization/calibration.cpp:665: fake quant weights done.
+ComputeFeatureRange: 100.00 %
+CollectFeatureDistribution: 100.00 %
+computeDistance: 100.00 %
+
+Debug info:
+
+/model.0/conv/conv.0/Conv_output_0 input_tensor_0:  cos distance: 0.897178, overflow ratio: 0.031695
+/model.0/conv/conv.0/Conv_output_0 output_tensor_0:  cos distance: 0.907685, overflow ratio: 0.000000
+/model.1/branch1/branch1.0/Conv_output_0 input_tensor_0:  cos distance: 0.942899, overflow ratio: 0.000000
+/model.1/branch1/branch1.0/Conv_output_0 output_tensor_0:  cos distance: 0.916583, overflow ratio: 0.000000
+/model.1/branch1/branch1.1/Conv_output_0 output_tensor_0:  cos distance: 0.896340, overflow ratio: 0.000000
+/model.1/branch2/branch2.0/Conv_output_0 output_tensor_0:  cos distance: 0.953692, overflow ratio: 0.000000
+/model.1/branch2/branch2.2/Conv_output_0 output_tensor_0:  cos distance: 0.802959, overflow ratio: 0.096427
+/model.1/branch2/branch2.3/Conv_output_0 output_tensor_0:  cos distance: 0.861278, overflow ratio: 0.000000
+/model.10/conv1/Conv_output_0 input_tensor_0:  cos distance: 0.536086, overflow ratio: 0.000000
+/model.10/conv1/Conv_output_0 output_tensor_0:  cos distance: 0.529230, overflow ratio: 0.000000
+/model.10/conv2/Conv_output_0 output_tensor_0:  cos distance: 0.518004, overflow ratio: 0.000000
+/model.11/act/Mul_output_0 output_tensor_0:  cos distance: 0.504195, overflow ratio: 0.000000
+/model.11/act/Sigmoid_output_0 output_tensor_0:  cos distance: 0.677591, overflow ratio: 0.038463
+/model.11/conv/Conv_output_0 output_tensor_0:  cos distance: 0.552962, overflow ratio: 0.000000
+/model.14/conv1/Conv_output_0 input_tensor_0:  cos distance: 0.689577, overflow ratio: 0.000000
+/model.14/conv1/Conv_output_0 output_tensor_0:  cos distance: 0.675657, overflow ratio: 0.000003
+/model.14/conv2/Conv_output_0 output_tensor_0:  cos distance: 0.499912, overflow ratio: 0.000000
+/model.15/conv1/Conv_output_0 output_tensor_0:  cos distance: 0.530531, overflow ratio: 0.000000
+/model.15/conv2/Conv_output_0 output_tensor_0:  cos distance: 0.663443, overflow ratio: 0.000000
+/model.16/Add_output_0 output_tensor_0:  cos distance: 0.672991, overflow ratio: 0.000000
+/model.17/conv1/Conv_output_0 output_tensor_0:  cos distance: 0.658379, overflow ratio: 0.000000
+/model.17/conv2/Conv_output_0 output_tensor_0:  cos distance: 0.559893, overflow ratio: 0.000000
+/model.18/conv1/Conv_output_0 output_tensor_0:  cos distance: 0.640021, overflow ratio: 0.000000
+/model.18/conv2/Conv_output_0 output_tensor_0:  cos distance: 0.555547, overflow ratio: 0.000000
+/model.19/Add_output_0 output_tensor_0:  cos distance: 0.342798, overflow ratio: 0.000000
+/model.2/model.2.0/branch2/branch2.0/Conv_output_0 input_tensor_0:  cos distance: 0.782778, overflow ratio: 0.000000
+/model.2/model.2.0/branch2/branch2.0/Conv_output_0 output_tensor_0:  cos distance: 0.759701, overflow ratio: 0.000000
+/model.2/model.2.0/branch2/branch2.2/Conv_output_0 output_tensor_0:  cos distance: 0.525844, overflow ratio: 0.000538
+/model.2/model.2.0/branch2/branch2.3/Conv_output_0 output_tensor_0:  cos distance: 0.557036, overflow ratio: 0.000000
+/model.2/model.2.1/branch2/branch2.0/Conv_output_0 input_tensor_0:  cos distance: 0.823342, overflow ratio: 0.000000
+/model.2/model.2.1/branch2/branch2.0/Conv_output_0 output_tensor_0:  cos distance: 0.872650, overflow ratio: 0.000000
+/model.2/model.2.1/branch2/branch2.2/Conv_output_0 output_tensor_0:  cos distance: 0.785211, overflow ratio: 0.000000
+/model.2/model.2.1/branch2/branch2.3/Conv_output_0 output_tensor_0:  cos distance: 0.778657, overflow ratio: 0.000000
+/model.2/model.2.2/branch2/branch2.0/Conv_output_0 input_tensor_0:  cos distance: 0.820001, overflow ratio: 0.000000
+/model.2/model.2.2/branch2/branch2.0/Conv_output_0 output_tensor_0:  cos distance: 0.736261, overflow ratio: 0.000000
+/model.2/model.2.2/branch2/branch2.2/Conv_output_0 output_tensor_0:  cos distance: 0.683538, overflow ratio: 0.000000
+/model.2/model.2.2/branch2/branch2.3/Conv_output_0 output_tensor_0:  cos distance: 0.747399, overflow ratio: 0.000000
+/model.20/conv1/Conv_output_0 output_tensor_0:  cos distance: 0.254231, overflow ratio: 0.000000
+/model.20/conv2/Conv_output_0 output_tensor_0:  cos distance: 0.383421, overflow ratio: 0.000000
+/model.21/Add_1_output_0 input_tensor_1:  cos distance: 0.966952, overflow ratio: 0.412499
+/model.21/Add_1_output_0 output_tensor_0:  cos distance: 0.965553, overflow ratio: 0.000000
+/model.21/Add_2_output_0 input_tensor_1:  cos distance: 0.918407, overflow ratio: 0.524999
+/model.21/Add_2_output_0 output_tensor_0:  cos distance: 0.908265, overflow ratio: 0.000000
+/model.21/Add_output_0 input_tensor_1:  cos distance: 0.970083, overflow ratio: 0.375000
+/model.21/Add_output_0 output_tensor_0:  cos distance: 0.971657, overflow ratio: 0.000000
+/model.21/Mul_10_output_0 input_tensor_0:  cos distance: 0.867686, overflow ratio: 0.000000
+/model.21/Mul_10_output_0 output_tensor_0:  cos distance: 0.867686, overflow ratio: 0.000000
+/model.21/Mul_11_output_0 input_tensor_1:  cos distance: 0.961518, overflow ratio: 0.375000
+/model.21/Mul_11_output_0 output_tensor_0:  cos distance: 0.744770, overflow ratio: 0.000000
+/model.21/Mul_1_output_0 input_tensor_1:  cos distance: 1.000000, overflow ratio: 1.000000
+/model.21/Mul_1_output_0 output_tensor_0:  cos distance: 0.971657, overflow ratio: 0.000000
+/model.21/Mul_2_output_0 input_tensor_0:  cos distance: 0.814245, overflow ratio: 0.001621
+/model.21/Mul_2_output_0 output_tensor_0:  cos distance: 0.814245, overflow ratio: 0.001621
+/model.21/Mul_3_output_0 input_tensor_1:  cos distance: 0.958555, overflow ratio: 0.500000
+/model.21/Mul_3_output_0 output_tensor_0:  cos distance: 0.668830, overflow ratio: 0.000147
+/model.21/Mul_4_output_0 input_tensor_0:  cos distance: 0.842902, overflow ratio: 0.000195
+/model.21/Mul_4_output_0 output_tensor_0:  cos distance: 0.842902, overflow ratio: 0.000195
+/model.21/Mul_5_output_0 input_tensor_1:  cos distance: 1.000000, overflow ratio: 1.000000
+/model.21/Mul_5_output_0 output_tensor_0:  cos distance: 0.965553, overflow ratio: 0.000000
+/model.21/Mul_6_output_0 input_tensor_0:  cos distance: 0.827672, overflow ratio: 0.000001
+/model.21/Mul_6_output_0 output_tensor_0:  cos distance: 0.827672, overflow ratio: 0.000001
+/model.21/Mul_7_output_0 input_tensor_1:  cos distance: 0.953677, overflow ratio: 0.250000
+/model.21/Mul_7_output_0 output_tensor_0:  cos distance: 0.719714, overflow ratio: 0.000000
+/model.21/Mul_8_output_0 input_tensor_0:  cos distance: 0.662051, overflow ratio: 0.000000
+/model.21/Mul_8_output_0 output_tensor_0:  cos distance: 0.662051, overflow ratio: 0.000000
+/model.21/Mul_9_output_0 input_tensor_1:  cos distance: 1.000000, overflow ratio: 1.000000
+/model.21/Mul_9_output_0 output_tensor_0:  cos distance: 0.908265, overflow ratio: 0.000000
+/model.21/Mul_output_0 input_tensor_0:  cos distance: 0.802590, overflow ratio: 0.081845
+/model.21/Mul_output_0 input_tensor_1:  cos distance: 1.000000, overflow ratio: 1.000000
+/model.21/Mul_output_0 output_tensor_0:  cos distance: 0.802590, overflow ratio: 0.081845
+/model.21/Pow_1_output_0 output_tensor_0:  cos distance: 0.690098, overflow ratio: 0.000001
+/model.21/Pow_2_output_0 output_tensor_0:  cos distance: 0.725903, overflow ratio: 0.000000
+/model.21/Pow_output_0 output_tensor_0:  cos distance: 0.721906, overflow ratio: 0.001621
+/model.21/Sigmoid_1_output_0 input_tensor_0:  cos distance: 0.643472, overflow ratio: 0.000000
+/model.21/Sigmoid_1_output_0 output_tensor_0:  cos distance: 0.761501, overflow ratio: 0.005544
+/model.21/Sigmoid_2_output_0 input_tensor_0:  cos distance: 0.644390, overflow ratio: 0.000000
+/model.21/Sigmoid_2_output_0 output_tensor_0:  cos distance: 0.731506, overflow ratio: 0.000127
+/model.21/Sigmoid_output_0 input_tensor_0:  cos distance: 0.583702, overflow ratio: 0.000000
+/model.21/Sigmoid_output_0 output_tensor_0:  cos distance: 0.706014, overflow ratio: 0.032570
+/model.21/Sub_1_output_0 output_tensor_0:  cos distance: 0.712724, overflow ratio: 0.000195
+/model.21/Sub_2_output_0 output_tensor_0:  cos distance: 0.431414, overflow ratio: 0.689348
+/model.21/Sub_output_0 input_tensor_1:  cos distance: 1.000000, overflow ratio: 1.000000
+/model.21/Sub_output_0 output_tensor_0:  cos distance: 0.614432, overflow ratio: 0.826311
+/model.21/m.0/Conv_output_0 output_tensor_0:  cos distance: 0.583459, overflow ratio: 0.000000
+/model.21/m.1/Conv_output_0 output_tensor_0:  cos distance: 0.643595, overflow ratio: 0.000000
+/model.21/m.2/Conv_output_0 output_tensor_0:  cos distance: 0.645305, overflow ratio: 0.000000
+/model.3/branch1/branch1.0/Conv_output_0 input_tensor_0:  cos distance: 0.692187, overflow ratio: 0.000000
+/model.3/branch1/branch1.0/Conv_output_0 output_tensor_0:  cos distance: 0.782767, overflow ratio: 0.000000
+/model.3/branch1/branch1.1/Conv_output_0 output_tensor_0:  cos distance: 0.771523, overflow ratio: 0.000000
+/model.3/branch2/branch2.0/Conv_output_0 output_tensor_0:  cos distance: 0.578253, overflow ratio: 0.000000
+/model.3/branch2/branch2.2/Conv_output_0 output_tensor_0:  cos distance: 0.556120, overflow ratio: 0.033137
+/model.3/branch2/branch2.3/Conv_output_0 output_tensor_0:  cos distance: 0.704097, overflow ratio: 0.000000
+/model.4/model.4.0/branch2/branch2.0/Conv_output_0 input_tensor_0:  cos distance: 0.765315, overflow ratio: 0.000000
+/model.4/model.4.0/branch2/branch2.0/Conv_output_0 output_tensor_0:  cos distance: 0.811854, overflow ratio: 0.000000
+/model.4/model.4.0/branch2/branch2.2/Conv_output_0 output_tensor_0:  cos distance: 0.735375, overflow ratio: 0.000003
+/model.4/model.4.0/branch2/branch2.3/Conv_output_0 output_tensor_0:  cos distance: 0.759773, overflow ratio: 0.000000
+/model.4/model.4.1/branch2/branch2.0/Conv_output_0 input_tensor_0:  cos distance: 0.719881, overflow ratio: 0.000000
+/model.4/model.4.1/branch2/branch2.0/Conv_output_0 output_tensor_0:  cos distance: 0.579908, overflow ratio: 0.000000
+/model.4/model.4.1/branch2/branch2.2/Conv_output_0 output_tensor_0:  cos distance: 0.520214, overflow ratio: 0.000000
+/model.4/model.4.1/branch2/branch2.3/Conv_output_0 output_tensor_0:  cos distance: 0.546556, overflow ratio: 0.000000
+/model.4/model.4.2/branch2/branch2.0/Conv_output_0 input_tensor_0:  cos distance: 0.694034, overflow ratio: 0.000000
+/model.4/model.4.2/branch2/branch2.0/Conv_output_0 output_tensor_0:  cos distance: 0.584501, overflow ratio: 0.000000
+/model.4/model.4.2/branch2/branch2.2/Conv_output_0 output_tensor_0:  cos distance: 0.575341, overflow ratio: 0.000000
+/model.4/model.4.2/branch2/branch2.3/Conv_output_0 output_tensor_0:  cos distance: 0.604325, overflow ratio: 0.000000
+/model.4/model.4.3/branch2/branch2.0/Conv_output_0 input_tensor_0:  cos distance: 0.529562, overflow ratio: 0.000000
+/model.4/model.4.3/branch2/branch2.0/Conv_output_0 output_tensor_0:  cos distance: 0.564470, overflow ratio: 0.000000
+/model.4/model.4.3/branch2/branch2.2/Conv_output_0 output_tensor_0:  cos distance: 0.387192, overflow ratio: 0.000066
+/model.4/model.4.3/branch2/branch2.3/Conv_output_0 output_tensor_0:  cos distance: 0.383651, overflow ratio: 0.000000
+/model.4/model.4.4/branch2/branch2.0/Conv_output_0 input_tensor_0:  cos distance: 0.565907, overflow ratio: 0.000000
+/model.4/model.4.4/branch2/branch2.0/Conv_output_0 output_tensor_0:  cos distance: 0.614095, overflow ratio: 0.000000
+/model.4/model.4.4/branch2/branch2.2/Conv_output_0 output_tensor_0:  cos distance: 0.632180, overflow ratio: 0.000005
+/model.4/model.4.4/branch2/branch2.3/Conv_output_0 output_tensor_0:  cos distance: 0.709464, overflow ratio: 0.000000
+/model.4/model.4.5/branch2/branch2.0/Conv_output_0 input_tensor_0:  cos distance: 0.575816, overflow ratio: 0.000000
+/model.4/model.4.5/branch2/branch2.0/Conv_output_0 output_tensor_0:  cos distance: 0.569802, overflow ratio: 0.000000
+/model.4/model.4.5/branch2/branch2.2/Conv_output_0 output_tensor_0:  cos distance: 0.548717, overflow ratio: 0.000000
+/model.4/model.4.5/branch2/branch2.3/Conv_output_0 output_tensor_0:  cos distance: 0.487054, overflow ratio: 0.000000
+/model.4/model.4.6/branch2/branch2.0/Conv_output_0 input_tensor_0:  cos distance: 0.571644, overflow ratio: 0.000000
+/model.4/model.4.6/branch2/branch2.0/Conv_output_0 output_tensor_0:  cos distance: 0.599052, overflow ratio: 0.000000
+/model.4/model.4.6/branch2/branch2.2/Conv_output_0 output_tensor_0:  cos distance: 0.678550, overflow ratio: 0.001215
+/model.4/model.4.6/branch2/branch2.3/Conv_output_0 output_tensor_0:  cos distance: 0.662989, overflow ratio: 0.000000
+/model.5/branch1/branch1.0/Conv_output_0 input_tensor_0:  cos distance: 0.616506, overflow ratio: 0.000000
+/model.5/branch1/branch1.0/Conv_output_0 output_tensor_0:  cos distance: 0.651024, overflow ratio: 0.000000
+/model.5/branch1/branch1.1/Conv_output_0 output_tensor_0:  cos distance: 0.586012, overflow ratio: 0.000000
+/model.5/branch2/branch2.0/Conv_output_0 output_tensor_0:  cos distance: 0.517073, overflow ratio: 0.000000
+/model.5/branch2/branch2.2/Conv_output_0 output_tensor_0:  cos distance: 0.535644, overflow ratio: 0.021581
+/model.5/branch2/branch2.3/Conv_output_0 output_tensor_0:  cos distance: 0.582062, overflow ratio: 0.000000
+/model.6/branch2/branch2.0/Conv_output_0 input_tensor_0:  cos distance: 0.675100, overflow ratio: 0.000000
+/model.6/branch2/branch2.0/Conv_output_0 output_tensor_0:  cos distance: 0.682639, overflow ratio: 0.000000
+/model.6/branch2/branch2.2/Conv_output_0 output_tensor_0:  cos distance: 0.690538, overflow ratio: 0.005552
+/model.6/branch2/branch2.3/Conv_output_0 output_tensor_0:  cos distance: 0.531259, overflow ratio: 0.000000
+/model.7/act/Mul_output_0 output_tensor_0:  cos distance: 0.624880, overflow ratio: 0.000000
+/model.7/act/Sigmoid_output_0 output_tensor_0:  cos distance: 0.667440, overflow ratio: 0.494170
+/model.7/conv/Conv_output_0 input_tensor_0:  cos distance: 0.494621, overflow ratio: 0.000000
+/model.7/conv/Conv_output_0 output_tensor_0:  cos distance: 0.771589, overflow ratio: 0.000000
+[01:21:38] /home/pi/MNN-2.7.0/tools/quantization/quantized.cpp:58: Quantize model done!
+(venv) pi@raspberrypi:~/MNN-2.7.0 $ sudo ./build/quantized.out /home/pi/best_mnnd.mnn  /home/pi/best_mnnd_i8_debug_1.mnn /home/pi/best.json
+[01:25:17] /home/pi/MNN-2.7.0/tools/quantization/quantized.cpp:23: >>> modelFile: /home/pi/best_mnnd.mnn
+[01:25:17] /home/pi/MNN-2.7.0/tools/quantization/quantized.cpp:24: >>> preTreatConfig: /home/pi/best.json
+[01:25:17] /home/pi/MNN-2.7.0/tools/quantization/quantized.cpp:25: >>> dstFile: /home/pi/best_mnnd_i8_debug_1.mnn
+[01:25:17] /home/pi/MNN-2.7.0/tools/quantization/quantized.cpp:53: Calibrate the feature and quantize model...
+[01:25:17] /home/pi/MNN-2.7.0/tools/quantization/calibration.cpp:158: Use feature quantization method: KL
+[01:25:17] /home/pi/MNN-2.7.0/tools/quantization/calibration.cpp:159: Use weight quantization method: MAX_ABS
+[01:25:17] /home/pi/MNN-2.7.0/tools/quantization/calibration.cpp:179: feature_clamp_value: 127
+[01:25:17] /home/pi/MNN-2.7.0/tools/quantization/calibration.cpp:180: weight_clamp_value: 127
+The device support i8sdot:0, support fp16:0, support i8mm: 0
+The device support i8sdot:0, support fp16:0, support i8mm: 0
+[01:25:17] /home/pi/MNN-2.7.0/tools/quantization/Helper.cpp:111: used image num: 518
+[01:25:17] /home/pi/MNN-2.7.0/tools/quantization/calibration.cpp:665: fake quant weights done.
+ComputeFeatureRange: 100.00 %
+CollectFeatureDistribution: 100.00 %
+computeDistance: 100.00 %
+
+Debug info:
+
+/model.0/conv/conv.0/Conv_output_0 input_tensor_0:  cos distance: 0.906944, overflow ratio: 0.032661
+/model.0/conv/conv.0/Conv_output_0 output_tensor_0:  cos distance: 0.919283, overflow ratio: 0.000000
+/model.1/branch1/branch1.0/Conv_output_0 input_tensor_0:  cos distance: 0.949336, overflow ratio: 0.000000
+/model.1/branch1/branch1.0/Conv_output_0 output_tensor_0:  cos distance: 0.926198, overflow ratio: 0.000000
+/model.1/branch1/branch1.1/Conv_output_0 output_tensor_0:  cos distance: 0.912412, overflow ratio: 0.000000
+/model.1/branch2/branch2.0/Conv_output_0 output_tensor_0:  cos distance: 0.959259, overflow ratio: 0.000000
+/model.1/branch2/branch2.2/Conv_output_0 output_tensor_0:  cos distance: 0.964248, overflow ratio: 0.000000
+/model.1/branch2/branch2.3/Conv_output_0 output_tensor_0:  cos distance: 0.972312, overflow ratio: 0.000000
+/model.10/conv1/Conv_output_0 input_tensor_0:  cos distance: 0.702689, overflow ratio: 0.000000
+/model.10/conv1/Conv_output_0 output_tensor_0:  cos distance: 0.730717, overflow ratio: 0.000000
+/model.10/conv2/Conv_output_0 output_tensor_0:  cos distance: 0.631254, overflow ratio: 0.000000
+/model.11/act/Mul_output_0 output_tensor_0:  cos distance: 0.676583, overflow ratio: 0.000000
+/model.11/act/Sigmoid_output_0 output_tensor_0:  cos distance: 0.698076, overflow ratio: 0.112091
+/model.11/conv/Conv_output_0 output_tensor_0:  cos distance: 0.659023, overflow ratio: 0.000000
+/model.14/conv1/Conv_output_0 input_tensor_0:  cos distance: 0.863528, overflow ratio: 0.001521
+/model.14/conv1/Conv_output_0 output_tensor_0:  cos distance: 0.837799, overflow ratio: 0.001450
+/model.14/conv2/Conv_output_0 output_tensor_0:  cos distance: 0.702926, overflow ratio: 0.000000
+/model.15/conv1/Conv_output_0 output_tensor_0:  cos distance: 0.694661, overflow ratio: 0.000000
+/model.15/conv2/Conv_output_0 output_tensor_0:  cos distance: 0.790243, overflow ratio: 0.000000
+/model.16/Add_output_0 output_tensor_0:  cos distance: 0.786378, overflow ratio: 0.000000
+/model.17/conv1/Conv_output_0 output_tensor_0:  cos distance: 0.822249, overflow ratio: 0.000000
+/model.17/conv2/Conv_output_0 output_tensor_0:  cos distance: 0.746861, overflow ratio: 0.000000
+/model.18/conv1/Conv_output_0 output_tensor_0:  cos distance: 0.786210, overflow ratio: 0.000022
+/model.18/conv2/Conv_output_0 output_tensor_0:  cos distance: 0.634487, overflow ratio: 0.000107
+/model.19/Add_output_0 output_tensor_0:  cos distance: 0.353608, overflow ratio: 0.001871
+/model.2/model.2.0/branch2/branch2.0/Conv_output_0 input_tensor_0:  cos distance: 0.968092, overflow ratio: 0.000000
+/model.2/model.2.0/branch2/branch2.0/Conv_output_0 output_tensor_0:  cos distance: 0.972385, overflow ratio: 0.000000
+/model.2/model.2.0/branch2/branch2.2/Conv_output_0 output_tensor_0:  cos distance: 0.867665, overflow ratio: 0.004596
+/model.2/model.2.0/branch2/branch2.3/Conv_output_0 output_tensor_0:  cos distance: 0.833304, overflow ratio: 0.000000
+/model.2/model.2.1/branch2/branch2.0/Conv_output_0 input_tensor_0:  cos distance: 0.899313, overflow ratio: 0.000000
+/model.2/model.2.1/branch2/branch2.0/Conv_output_0 output_tensor_0:  cos distance: 0.926722, overflow ratio: 0.000000
+/model.2/model.2.1/branch2/branch2.2/Conv_output_0 output_tensor_0:  cos distance: 0.867099, overflow ratio: 0.000339
+/model.2/model.2.1/branch2/branch2.3/Conv_output_0 output_tensor_0:  cos distance: 0.847127, overflow ratio: 0.000000
+/model.2/model.2.2/branch2/branch2.0/Conv_output_0 input_tensor_0:  cos distance: 0.888106, overflow ratio: 0.000000
+/model.2/model.2.2/branch2/branch2.0/Conv_output_0 output_tensor_0:  cos distance: 0.835127, overflow ratio: 0.000000
+/model.2/model.2.2/branch2/branch2.2/Conv_output_0 output_tensor_0:  cos distance: 0.771123, overflow ratio: 0.000001
+/model.2/model.2.2/branch2/branch2.3/Conv_output_0 output_tensor_0:  cos distance: 0.803701, overflow ratio: 0.000000
+/model.20/conv1/Conv_output_0 output_tensor_0:  cos distance: 0.384894, overflow ratio: 0.000000
+/model.20/conv2/Conv_output_0 output_tensor_0:  cos distance: 0.370935, overflow ratio: 0.000000
+/model.21/Add_1_output_0 input_tensor_1:  cos distance: 0.966951, overflow ratio: 0.412502
+/model.21/Add_1_output_0 output_tensor_0:  cos distance: 0.963312, overflow ratio: 0.000000
+/model.21/Add_2_output_0 input_tensor_1:  cos distance: 0.918402, overflow ratio: 0.524997
+/model.21/Add_2_output_0 output_tensor_0:  cos distance: 0.905696, overflow ratio: 0.000000
+/model.21/Add_output_0 input_tensor_1:  cos distance: 0.970086, overflow ratio: 0.375000
+/model.21/Add_output_0 output_tensor_0:  cos distance: 0.972015, overflow ratio: 0.000000
+/model.21/Mul_10_output_0 input_tensor_0:  cos distance: 0.808013, overflow ratio: 0.000000
+/model.21/Mul_10_output_0 output_tensor_0:  cos distance: 0.808013, overflow ratio: 0.000000
+/model.21/Mul_11_output_0 input_tensor_1:  cos distance: 0.961518, overflow ratio: 0.375000
+/model.21/Mul_11_output_0 output_tensor_0:  cos distance: 0.575716, overflow ratio: 0.000000
+/model.21/Mul_1_output_0 input_tensor_1:  cos distance: 1.000000, overflow ratio: 1.000000
+/model.21/Mul_1_output_0 output_tensor_0:  cos distance: 0.972015, overflow ratio: 0.000000
+/model.21/Mul_2_output_0 input_tensor_0:  cos distance: 0.854845, overflow ratio: 0.198959
+/model.21/Mul_2_output_0 output_tensor_0:  cos distance: 0.854845, overflow ratio: 0.198959
+/model.21/Mul_3_output_0 input_tensor_1:  cos distance: 0.958556, overflow ratio: 0.500000
+/model.21/Mul_3_output_0 output_tensor_0:  cos distance: 0.755624, overflow ratio: 0.066744
+/model.21/Mul_4_output_0 input_tensor_0:  cos distance: 0.882853, overflow ratio: 0.023865
+/model.21/Mul_4_output_0 output_tensor_0:  cos distance: 0.882853, overflow ratio: 0.023865
+/model.21/Mul_5_output_0 input_tensor_1:  cos distance: 1.000000, overflow ratio: 1.000000
+/model.21/Mul_5_output_0 output_tensor_0:  cos distance: 0.963312, overflow ratio: 0.000000
+/model.21/Mul_6_output_0 input_tensor_0:  cos distance: 0.817459, overflow ratio: 0.000000
+/model.21/Mul_6_output_0 output_tensor_0:  cos distance: 0.817459, overflow ratio: 0.000000
+/model.21/Mul_7_output_0 input_tensor_1:  cos distance: 0.953676, overflow ratio: 0.250000
+/model.21/Mul_7_output_0 output_tensor_0:  cos distance: 0.649780, overflow ratio: 0.000000
+/model.21/Mul_8_output_0 input_tensor_0:  cos distance: 0.750258, overflow ratio: 0.000005
+/model.21/Mul_8_output_0 output_tensor_0:  cos distance: 0.750258, overflow ratio: 0.000005
+/model.21/Mul_9_output_0 input_tensor_1:  cos distance: 1.000000, overflow ratio: 1.000000
+/model.21/Mul_9_output_0 output_tensor_0:  cos distance: 0.905696, overflow ratio: 0.000000
+/model.21/Mul_output_0 input_tensor_0:  cos distance: 0.852462, overflow ratio: 0.185491
+/model.21/Mul_output_0 input_tensor_1:  cos distance: 1.000000, overflow ratio: 1.000000
+/model.21/Mul_output_0 output_tensor_0:  cos distance: 0.852462, overflow ratio: 0.185491
+/model.21/Pow_1_output_0 output_tensor_0:  cos distance: 0.639949, overflow ratio: 0.000000
+/model.21/Pow_2_output_0 output_tensor_0:  cos distance: 0.616921, overflow ratio: 0.000000
+/model.21/Pow_output_0 output_tensor_0:  cos distance: 0.822064, overflow ratio: 0.198959
+/model.21/Sigmoid_1_output_0 input_tensor_0:  cos distance: 0.842088, overflow ratio: 0.000000
+/model.21/Sigmoid_1_output_0 output_tensor_0:  cos distance: 0.841988, overflow ratio: 0.024285
+/model.21/Sigmoid_2_output_0 input_tensor_0:  cos distance: 0.617002, overflow ratio: 0.000000
+/model.21/Sigmoid_2_output_0 output_tensor_0:  cos distance: 0.727629, overflow ratio: 0.001438
+/model.21/Sigmoid_output_0 input_tensor_0:  cos distance: 0.722281, overflow ratio: 0.000000
+/model.21/Sigmoid_output_0 output_tensor_0:  cos distance: 0.772688, overflow ratio: 0.111981
+/model.21/Sub_1_output_0 output_tensor_0:  cos distance: 0.791398, overflow ratio: 0.023865
+/model.21/Sub_2_output_0 output_tensor_0:  cos distance: 0.559551, overflow ratio: 0.600569
+/model.21/Sub_output_0 input_tensor_1:  cos distance: 1.000000, overflow ratio: 1.000000
+/model.21/Sub_output_0 output_tensor_0:  cos distance: 0.667001, overflow ratio: 0.820347
+/model.21/m.0/Conv_output_0 output_tensor_0:  cos distance: 0.722305, overflow ratio: 0.000000
+/model.21/m.1/Conv_output_0 output_tensor_0:  cos distance: 0.842217, overflow ratio: 0.000000
+/model.21/m.2/Conv_output_0 output_tensor_0:  cos distance: 0.617744, overflow ratio: 0.000000
+/model.3/branch1/branch1.0/Conv_output_0 input_tensor_0:  cos distance: 0.867240, overflow ratio: 0.000000
+/model.3/branch1/branch1.0/Conv_output_0 output_tensor_0:  cos distance: 0.928299, overflow ratio: 0.003954
+/model.3/branch1/branch1.1/Conv_output_0 output_tensor_0:  cos distance: 0.907803, overflow ratio: 0.000000
+/model.3/branch2/branch2.0/Conv_output_0 output_tensor_0:  cos distance: 0.767081, overflow ratio: 0.000000
+/model.3/branch2/branch2.2/Conv_output_0 output_tensor_0:  cos distance: 0.808890, overflow ratio: 0.060316
+/model.3/branch2/branch2.3/Conv_output_0 output_tensor_0:  cos distance: 0.839498, overflow ratio: 0.000000
+/model.4/model.4.0/branch2/branch2.0/Conv_output_0 input_tensor_0:  cos distance: 0.857941, overflow ratio: 0.000000
+/model.4/model.4.0/branch2/branch2.0/Conv_output_0 output_tensor_0:  cos distance: 0.905069, overflow ratio: 0.000000
+/model.4/model.4.0/branch2/branch2.2/Conv_output_0 output_tensor_0:  cos distance: 0.880143, overflow ratio: 0.007202
+/model.4/model.4.0/branch2/branch2.3/Conv_output_0 output_tensor_0:  cos distance: 0.853512, overflow ratio: 0.000000
+/model.4/model.4.1/branch2/branch2.0/Conv_output_0 input_tensor_0:  cos distance: 0.840357, overflow ratio: 0.000000
+/model.4/model.4.1/branch2/branch2.0/Conv_output_0 output_tensor_0:  cos distance: 0.734734, overflow ratio: 0.000000
+/model.4/model.4.1/branch2/branch2.2/Conv_output_0 output_tensor_0:  cos distance: 0.652478, overflow ratio: 0.000000
+/model.4/model.4.1/branch2/branch2.3/Conv_output_0 output_tensor_0:  cos distance: 0.668245, overflow ratio: 0.000000
+/model.4/model.4.2/branch2/branch2.0/Conv_output_0 input_tensor_0:  cos distance: 0.786572, overflow ratio: 0.000000
+/model.4/model.4.2/branch2/branch2.0/Conv_output_0 output_tensor_0:  cos distance: 0.752862, overflow ratio: 0.000000
+/model.4/model.4.2/branch2/branch2.2/Conv_output_0 output_tensor_0:  cos distance: 0.779709, overflow ratio: 0.000002
+/model.4/model.4.2/branch2/branch2.3/Conv_output_0 output_tensor_0:  cos distance: 0.789351, overflow ratio: 0.000000
+/model.4/model.4.3/branch2/branch2.0/Conv_output_0 input_tensor_0:  cos distance: 0.746986, overflow ratio: 0.000000
+/model.4/model.4.3/branch2/branch2.0/Conv_output_0 output_tensor_0:  cos distance: 0.776040, overflow ratio: 0.000000
+/model.4/model.4.3/branch2/branch2.2/Conv_output_0 output_tensor_0:  cos distance: 0.733658, overflow ratio: 0.000000
+/model.4/model.4.3/branch2/branch2.3/Conv_output_0 output_tensor_0:  cos distance: 0.744553, overflow ratio: 0.000000
+/model.4/model.4.4/branch2/branch2.0/Conv_output_0 input_tensor_0:  cos distance: 0.832443, overflow ratio: 0.000000
+/model.4/model.4.4/branch2/branch2.0/Conv_output_0 output_tensor_0:  cos distance: 0.767720, overflow ratio: 0.000000
+/model.4/model.4.4/branch2/branch2.2/Conv_output_0 output_tensor_0:  cos distance: 0.784444, overflow ratio: 0.001260
+/model.4/model.4.4/branch2/branch2.3/Conv_output_0 output_tensor_0:  cos distance: 0.734340, overflow ratio: 0.000000
+/model.4/model.4.5/branch2/branch2.0/Conv_output_0 input_tensor_0:  cos distance: 0.793502, overflow ratio: 0.000000
+/model.4/model.4.5/branch2/branch2.0/Conv_output_0 output_tensor_0:  cos distance: 0.823183, overflow ratio: 0.000000
+/model.4/model.4.5/branch2/branch2.2/Conv_output_0 output_tensor_0:  cos distance: 0.815532, overflow ratio: 0.001831
+/model.4/model.4.5/branch2/branch2.3/Conv_output_0 output_tensor_0:  cos distance: 0.776775, overflow ratio: 0.000000
+/model.4/model.4.6/branch2/branch2.0/Conv_output_0 input_tensor_0:  cos distance: 0.774055, overflow ratio: 0.000000
+/model.4/model.4.6/branch2/branch2.0/Conv_output_0 output_tensor_0:  cos distance: 0.741611, overflow ratio: 0.000000
+/model.4/model.4.6/branch2/branch2.2/Conv_output_0 output_tensor_0:  cos distance: 0.809030, overflow ratio: 0.000483
+/model.4/model.4.6/branch2/branch2.3/Conv_output_0 output_tensor_0:  cos distance: 0.715430, overflow ratio: 0.000000
+/model.5/branch1/branch1.0/Conv_output_0 input_tensor_0:  cos distance: 0.808372, overflow ratio: 0.000000
+/model.5/branch1/branch1.0/Conv_output_0 output_tensor_0:  cos distance: 0.832380, overflow ratio: 0.000000
+/model.5/branch1/branch1.1/Conv_output_0 output_tensor_0:  cos distance: 0.783051, overflow ratio: 0.000000
+/model.5/branch2/branch2.0/Conv_output_0 output_tensor_0:  cos distance: 0.742514, overflow ratio: 0.000000
+/model.5/branch2/branch2.2/Conv_output_0 output_tensor_0:  cos distance: 0.703903, overflow ratio: 0.039366
+/model.5/branch2/branch2.3/Conv_output_0 output_tensor_0:  cos distance: 0.671282, overflow ratio: 0.000000
+/model.6/branch2/branch2.0/Conv_output_0 input_tensor_0:  cos distance: 0.804524, overflow ratio: 0.000000
+/model.6/branch2/branch2.0/Conv_output_0 output_tensor_0:  cos distance: 0.801881, overflow ratio: 0.000000
+/model.6/branch2/branch2.2/Conv_output_0 output_tensor_0:  cos distance: 0.778240, overflow ratio: 0.003330
+/model.6/branch2/branch2.3/Conv_output_0 output_tensor_0:  cos distance: 0.600555, overflow ratio: 0.000000
+/model.7/act/Mul_output_0 output_tensor_0:  cos distance: 0.653463, overflow ratio: 0.000000
+/model.7/act/Sigmoid_output_0 output_tensor_0:  cos distance: 0.674964, overflow ratio: 0.485830
+/model.7/conv/Conv_output_0 input_tensor_0:  cos distance: 0.584724, overflow ratio: 0.000000
+/model.7/conv/Conv_output_0 output_tensor_0:  cos distance: 0.765090, overflow ratio: 0.000000
+[01:29:35] /home/pi/MNN-2.7.0/tools/quantization/quantized.cpp:58: Quantize model done!
+
+
+
+
+pi@raspberrypi:~/MNN-2.7.0 $ sudo ./build/quantized.out /home/pi/best_mnnd.mnn  /home/pi/best_mnnd_i8_debug_2.mnn /home/pi/best.json
+[17:30:16] /home/pi/MNN-2.7.0/tools/quantization/quantized.cpp:23: >>> modelFile: /home/pi/best_mnnd.mnn
+[17:30:16] /home/pi/MNN-2.7.0/tools/quantization/quantized.cpp:24: >>> preTreatConfig: /home/pi/best.json
+[17:30:16] /home/pi/MNN-2.7.0/tools/quantization/quantized.cpp:25: >>> dstFile: /home/pi/best_mnnd_i8_debug_2.mnn
+[17:30:16] /home/pi/MNN-2.7.0/tools/quantization/quantized.cpp:53: Calibrate the feature and quantize model...
+[17:30:16] /home/pi/MNN-2.7.0/tools/quantization/calibration.cpp:158: Use feature quantization method: KL
+[17:30:16] /home/pi/MNN-2.7.0/tools/quantization/calibration.cpp:159: Use weight quantization method: MAX_ABS
+[17:30:16] /home/pi/MNN-2.7.0/tools/quantization/calibration.cpp:179: feature_clamp_value: 127
+[17:30:16] /home/pi/MNN-2.7.0/tools/quantization/calibration.cpp:180: weight_clamp_value: 127
+The device support i8sdot:0, support fp16:0, support i8mm: 0
+The device support i8sdot:0, support fp16:0, support i8mm: 0
+[17:30:16] /home/pi/MNN-2.7.0/tools/quantization/Helper.cpp:111: used image num: 1300
+[17:30:16] /home/pi/MNN-2.7.0/tools/quantization/calibration.cpp:665: fake quant weights done.
+ComputeFeatureRange: 100.00 %
+CollectFeatureDistribution: 100.00 %
+computeDistance: 100.00 %
+
+Debug info:
+
+/model.0/conv/conv.0/Conv_output_0 input_tensor_0:  cos distance: 0.921828, overflow ratio: 0.033656
+/model.0/conv/conv.0/Conv_output_0 output_tensor_0:  cos distance: 0.930982, overflow ratio: 0.000000
+/model.1/branch1/branch1.0/Conv_output_0 input_tensor_0:  cos distance: 0.954151, overflow ratio: 0.000000
+/model.1/branch1/branch1.0/Conv_output_0 output_tensor_0:  cos distance: 0.933729, overflow ratio: 0.000000
+/model.1/branch1/branch1.1/Conv_output_0 output_tensor_0:  cos distance: 0.917326, overflow ratio: 0.000000
+/model.1/branch2/branch2.0/Conv_output_0 output_tensor_0:  cos distance: 0.962266, overflow ratio: 0.000000
+/model.1/branch2/branch2.2/Conv_output_0 output_tensor_0:  cos distance: 0.967245, overflow ratio: 0.000000
+/model.1/branch2/branch2.3/Conv_output_0 output_tensor_0:  cos distance: 0.973916, overflow ratio: 0.000000
+/model.10/conv1/Conv_output_0 input_tensor_0:  cos distance: 0.783708, overflow ratio: 0.000000
+/model.10/conv1/Conv_output_0 output_tensor_0:  cos distance: 0.802921, overflow ratio: 0.000000
+/model.10/conv2/Conv_output_0 output_tensor_0:  cos distance: 0.771996, overflow ratio: 0.000000
+/model.11/act/Mul_output_0 output_tensor_0:  cos distance: 0.811943, overflow ratio: 0.000049
+/model.11/act/Sigmoid_output_0 output_tensor_0:  cos distance: 0.804321, overflow ratio: 0.170549
+/model.11/conv/Conv_output_0 output_tensor_0:  cos distance: 0.833000, overflow ratio: 0.000000
+/model.14/conv1/Conv_output_0 input_tensor_0:  cos distance: 0.874212, overflow ratio: 0.000000
+/model.14/conv1/Conv_output_0 output_tensor_0:  cos distance: 0.858116, overflow ratio: 0.000000
+/model.14/conv2/Conv_output_0 output_tensor_0:  cos distance: 0.769744, overflow ratio: 0.000000
+/model.15/conv1/Conv_output_0 output_tensor_0:  cos distance: 0.743859, overflow ratio: 0.000000
+/model.15/conv2/Conv_output_0 output_tensor_0:  cos distance: 0.824280, overflow ratio: 0.000000
+/model.16/Add_output_0 output_tensor_0:  cos distance: 0.835730, overflow ratio: 0.000001
+/model.17/conv1/Conv_output_0 output_tensor_0:  cos distance: 0.836745, overflow ratio: 0.000000
+/model.17/conv2/Conv_output_0 output_tensor_0:  cos distance: 0.777213, overflow ratio: 0.000000
+/model.18/conv1/Conv_output_0 output_tensor_0:  cos distance: 0.796399, overflow ratio: 0.000000
+/model.18/conv2/Conv_output_0 output_tensor_0:  cos distance: 0.657810, overflow ratio: 0.000005
+/model.19/Add_output_0 output_tensor_0:  cos distance: 0.618652, overflow ratio: 0.000354
+/model.2/model.2.0/branch2/branch2.0/Conv_output_0 input_tensor_0:  cos distance: 0.969861, overflow ratio: 0.000000
+/model.2/model.2.0/branch2/branch2.0/Conv_output_0 output_tensor_0:  cos distance: 0.973776, overflow ratio: 0.000000
+/model.2/model.2.0/branch2/branch2.2/Conv_output_0 output_tensor_0:  cos distance: 0.880075, overflow ratio: 0.000560
+/model.2/model.2.0/branch2/branch2.3/Conv_output_0 output_tensor_0:  cos distance: 0.852245, overflow ratio: 0.000000
+/model.2/model.2.1/branch2/branch2.0/Conv_output_0 input_tensor_0:  cos distance: 0.906609, overflow ratio: 0.000000
+/model.2/model.2.1/branch2/branch2.0/Conv_output_0 output_tensor_0:  cos distance: 0.931333, overflow ratio: 0.000000
+/model.2/model.2.1/branch2/branch2.2/Conv_output_0 output_tensor_0:  cos distance: 0.875712, overflow ratio: 0.000796
+/model.2/model.2.1/branch2/branch2.3/Conv_output_0 output_tensor_0:  cos distance: 0.855331, overflow ratio: 0.000000
+/model.2/model.2.2/branch2/branch2.0/Conv_output_0 input_tensor_0:  cos distance: 0.896373, overflow ratio: 0.000000
+/model.2/model.2.2/branch2/branch2.0/Conv_output_0 output_tensor_0:  cos distance: 0.845272, overflow ratio: 0.000000
+/model.2/model.2.2/branch2/branch2.2/Conv_output_0 output_tensor_0:  cos distance: 0.784051, overflow ratio: 0.000000
+/model.2/model.2.2/branch2/branch2.3/Conv_output_0 output_tensor_0:  cos distance: 0.813085, overflow ratio: 0.000000
+/model.20/conv1/Conv_output_0 output_tensor_0:  cos distance: 0.604771, overflow ratio: 0.000000
+/model.20/conv2/Conv_output_0 output_tensor_0:  cos distance: 0.523561, overflow ratio: 0.000000
+/model.21/Add_1_output_0 input_tensor_1:  cos distance: 0.966957, overflow ratio: 0.412503
+/model.21/Add_1_output_0 output_tensor_0:  cos distance: 0.966345, overflow ratio: 0.000000
+/model.21/Add_2_output_0 input_tensor_1:  cos distance: 0.918407, overflow ratio: 0.525003
+/model.21/Add_2_output_0 output_tensor_0:  cos distance: 0.905852, overflow ratio: 0.000000
+/model.21/Add_output_0 input_tensor_1:  cos distance: 0.970090, overflow ratio: 0.375000
+/model.21/Add_output_0 output_tensor_0:  cos distance: 0.972033, overflow ratio: 0.000000
+/model.21/Mul_10_output_0 input_tensor_0:  cos distance: 0.854062, overflow ratio: 0.000000
+/model.21/Mul_10_output_0 output_tensor_0:  cos distance: 0.854062, overflow ratio: 0.000000
+/model.21/Mul_11_output_0 input_tensor_1:  cos distance: 0.961535, overflow ratio: 0.375000
+/model.21/Mul_11_output_0 output_tensor_0:  cos distance: 0.693637, overflow ratio: 0.000000
+/model.21/Mul_1_output_0 input_tensor_1:  cos distance: 1.000000, overflow ratio: 1.000000
+/model.21/Mul_1_output_0 output_tensor_0:  cos distance: 0.972033, overflow ratio: 0.000000
+/model.21/Mul_2_output_0 input_tensor_0:  cos distance: 0.931056, overflow ratio: 0.303747
+/model.21/Mul_2_output_0 output_tensor_0:  cos distance: 0.931056, overflow ratio: 0.303747
+/model.21/Mul_3_output_0 input_tensor_1:  cos distance: 0.958546, overflow ratio: 0.500000
+/model.21/Mul_3_output_0 output_tensor_0:  cos distance: 0.848061, overflow ratio: 0.126980
+/model.21/Mul_4_output_0 input_tensor_0:  cos distance: 0.889529, overflow ratio: 0.015876
+/model.21/Mul_4_output_0 output_tensor_0:  cos distance: 0.889529, overflow ratio: 0.015876
+/model.21/Mul_5_output_0 input_tensor_1:  cos distance: 1.000000, overflow ratio: 1.000000
+/model.21/Mul_5_output_0 output_tensor_0:  cos distance: 0.966345, overflow ratio: 0.000000
+/model.21/Mul_6_output_0 input_tensor_0:  cos distance: 0.884236, overflow ratio: 0.000000
+/model.21/Mul_6_output_0 output_tensor_0:  cos distance: 0.884236, overflow ratio: 0.000000
+/model.21/Mul_7_output_0 input_tensor_1:  cos distance: 0.953686, overflow ratio: 0.250000
+/model.21/Mul_7_output_0 output_tensor_0:  cos distance: 0.777312, overflow ratio: 0.000000
+/model.21/Mul_8_output_0 input_tensor_0:  cos distance: 0.780611, overflow ratio: 0.000000
+/model.21/Mul_8_output_0 output_tensor_0:  cos distance: 0.780611, overflow ratio: 0.000000
+/model.21/Mul_9_output_0 input_tensor_1:  cos distance: 1.000000, overflow ratio: 1.000000
+/model.21/Mul_9_output_0 output_tensor_0:  cos distance: 0.905852, overflow ratio: 0.000000
+/model.21/Mul_output_0 input_tensor_0:  cos distance: 0.835968, overflow ratio: 0.267068
+/model.21/Mul_output_0 input_tensor_1:  cos distance: 1.000000, overflow ratio: 1.000000
+/model.21/Mul_output_0 output_tensor_0:  cos distance: 0.835968, overflow ratio: 0.267068
+/model.21/Pow_1_output_0 output_tensor_0:  cos distance: 0.776725, overflow ratio: 0.000000
+/model.21/Pow_2_output_0 output_tensor_0:  cos distance: 0.714243, overflow ratio: 0.000000
+/model.21/Pow_output_0 output_tensor_0:  cos distance: 0.912041, overflow ratio: 0.303747
+/model.21/Sigmoid_1_output_0 input_tensor_0:  cos distance: 0.834103, overflow ratio: 0.000000
+/model.21/Sigmoid_1_output_0 output_tensor_0:  cos distance: 0.839247, overflow ratio: 0.015440
+/model.21/Sigmoid_2_output_0 input_tensor_0:  cos distance: 0.643197, overflow ratio: 0.000000
+/model.21/Sigmoid_2_output_0 output_tensor_0:  cos distance: 0.757055, overflow ratio: 0.000659
+/model.21/Sigmoid_output_0 input_tensor_0:  cos distance: 0.769301, overflow ratio: 0.000000
+/model.21/Sigmoid_output_0 output_tensor_0:  cos distance: 0.814526, overflow ratio: 0.152310
+/model.21/Sub_1_output_0 output_tensor_0:  cos distance: 0.803363, overflow ratio: 0.015876
+/model.21/Sub_2_output_0 output_tensor_0:  cos distance: 0.554932, overflow ratio: 0.637486
+/model.21/Sub_output_0 input_tensor_1:  cos distance: 1.000000, overflow ratio: 1.000000
+/model.21/Sub_output_0 output_tensor_0:  cos distance: 0.641889, overflow ratio: 0.869775
+/model.21/m.0/Conv_output_0 output_tensor_0:  cos distance: 0.769100, overflow ratio: 0.000000
+/model.21/m.1/Conv_output_0 output_tensor_0:  cos distance: 0.834185, overflow ratio: 0.000000
+/model.21/m.2/Conv_output_0 output_tensor_0:  cos distance: 0.643097, overflow ratio: 0.000000
+/model.3/branch1/branch1.0/Conv_output_0 input_tensor_0:  cos distance: 0.875499, overflow ratio: 0.000000
+/model.3/branch1/branch1.0/Conv_output_0 output_tensor_0:  cos distance: 0.929172, overflow ratio: 0.003962
+/model.3/branch1/branch1.1/Conv_output_0 output_tensor_0:  cos distance: 0.905926, overflow ratio: 0.000000
+/model.3/branch2/branch2.0/Conv_output_0 output_tensor_0:  cos distance: 0.780495, overflow ratio: 0.000000
+/model.3/branch2/branch2.2/Conv_output_0 output_tensor_0:  cos distance: 0.889085, overflow ratio: 0.000063
+/model.3/branch2/branch2.3/Conv_output_0 output_tensor_0:  cos distance: 0.895656, overflow ratio: 0.000000
+/model.4/model.4.0/branch2/branch2.0/Conv_output_0 input_tensor_0:  cos distance: 0.901871, overflow ratio: 0.000000
+/model.4/model.4.0/branch2/branch2.0/Conv_output_0 output_tensor_0:  cos distance: 0.912862, overflow ratio: 0.000000
+/model.4/model.4.0/branch2/branch2.2/Conv_output_0 output_tensor_0:  cos distance: 0.891358, overflow ratio: 0.016241
+/model.4/model.4.0/branch2/branch2.3/Conv_output_0 output_tensor_0:  cos distance: 0.863276, overflow ratio: 0.000000
+/model.4/model.4.1/branch2/branch2.0/Conv_output_0 input_tensor_0:  cos distance: 0.889752, overflow ratio: 0.000000
+/model.4/model.4.1/branch2/branch2.0/Conv_output_0 output_tensor_0:  cos distance: 0.846263, overflow ratio: 0.000000
+/model.4/model.4.1/branch2/branch2.2/Conv_output_0 output_tensor_0:  cos distance: 0.727818, overflow ratio: 0.000459
+/model.4/model.4.1/branch2/branch2.3/Conv_output_0 output_tensor_0:  cos distance: 0.731304, overflow ratio: 0.000000
+/model.4/model.4.2/branch2/branch2.0/Conv_output_0 input_tensor_0:  cos distance: 0.851580, overflow ratio: 0.000000
+/model.4/model.4.2/branch2/branch2.0/Conv_output_0 output_tensor_0:  cos distance: 0.858275, overflow ratio: 0.000000
+/model.4/model.4.2/branch2/branch2.2/Conv_output_0 output_tensor_0:  cos distance: 0.859453, overflow ratio: 0.002347
+/model.4/model.4.2/branch2/branch2.3/Conv_output_0 output_tensor_0:  cos distance: 0.846687, overflow ratio: 0.000000
+/model.4/model.4.3/branch2/branch2.0/Conv_output_0 input_tensor_0:  cos distance: 0.805506, overflow ratio: 0.000000
+/model.4/model.4.3/branch2/branch2.0/Conv_output_0 output_tensor_0:  cos distance: 0.836303, overflow ratio: 0.000000
+/model.4/model.4.3/branch2/branch2.2/Conv_output_0 output_tensor_0:  cos distance: 0.796739, overflow ratio: 0.003361
+/model.4/model.4.3/branch2/branch2.3/Conv_output_0 output_tensor_0:  cos distance: 0.804079, overflow ratio: 0.000000
+/model.4/model.4.4/branch2/branch2.0/Conv_output_0 input_tensor_0:  cos distance: 0.853932, overflow ratio: 0.000000
+/model.4/model.4.4/branch2/branch2.0/Conv_output_0 output_tensor_0:  cos distance: 0.780386, overflow ratio: 0.000000
+/model.4/model.4.4/branch2/branch2.2/Conv_output_0 output_tensor_0:  cos distance: 0.783129, overflow ratio: 0.005835
+/model.4/model.4.4/branch2/branch2.3/Conv_output_0 output_tensor_0:  cos distance: 0.757246, overflow ratio: 0.000000
+/model.4/model.4.5/branch2/branch2.0/Conv_output_0 input_tensor_0:  cos distance: 0.847856, overflow ratio: 0.000000
+/model.4/model.4.5/branch2/branch2.0/Conv_output_0 output_tensor_0:  cos distance: 0.874147, overflow ratio: 0.000000
+/model.4/model.4.5/branch2/branch2.2/Conv_output_0 output_tensor_0:  cos distance: 0.841398, overflow ratio: 0.016469
+/model.4/model.4.5/branch2/branch2.3/Conv_output_0 output_tensor_0:  cos distance: 0.807735, overflow ratio: 0.000000
+/model.4/model.4.6/branch2/branch2.0/Conv_output_0 input_tensor_0:  cos distance: 0.820719, overflow ratio: 0.000000
+/model.4/model.4.6/branch2/branch2.0/Conv_output_0 output_tensor_0:  cos distance: 0.768222, overflow ratio: 0.000000
+/model.4/model.4.6/branch2/branch2.2/Conv_output_0 output_tensor_0:  cos distance: 0.776228, overflow ratio: 0.005324
+/model.4/model.4.6/branch2/branch2.3/Conv_output_0 output_tensor_0:  cos distance: 0.658250, overflow ratio: 0.000000
+/model.5/branch1/branch1.0/Conv_output_0 input_tensor_0:  cos distance: 0.848257, overflow ratio: 0.000000
+/model.5/branch1/branch1.0/Conv_output_0 output_tensor_0:  cos distance: 0.864961, overflow ratio: 0.000000
+/model.5/branch1/branch1.1/Conv_output_0 output_tensor_0:  cos distance: 0.849127, overflow ratio: 0.000000
+/model.5/branch2/branch2.0/Conv_output_0 output_tensor_0:  cos distance: 0.806048, overflow ratio: 0.000000
+/model.5/branch2/branch2.2/Conv_output_0 output_tensor_0:  cos distance: 0.719896, overflow ratio: 0.056934
+/model.5/branch2/branch2.3/Conv_output_0 output_tensor_0:  cos distance: 0.714089, overflow ratio: 0.000000
+/model.6/branch2/branch2.0/Conv_output_0 input_tensor_0:  cos distance: 0.794300, overflow ratio: 0.000000
+/model.6/branch2/branch2.0/Conv_output_0 output_tensor_0:  cos distance: 0.751292, overflow ratio: 0.000000
+/model.6/branch2/branch2.2/Conv_output_0 output_tensor_0:  cos distance: 0.748367, overflow ratio: 0.007359
+/model.6/branch2/branch2.3/Conv_output_0 output_tensor_0:  cos distance: 0.601546, overflow ratio: 0.000000
+/model.7/act/Mul_output_0 output_tensor_0:  cos distance: 0.657316, overflow ratio: 0.019950
+/model.7/act/Sigmoid_output_0 output_tensor_0:  cos distance: 0.761199, overflow ratio: 0.099896
+/model.7/conv/Conv_output_0 input_tensor_0:  cos distance: 0.663820, overflow ratio: 0.000000
+/model.7/conv/Conv_output_0 output_tensor_0:  cos distance: 0.841334, overflow ratio: 0.000000
+[17:41:10] /home/pi/MNN-2.7.0/tools/quantization/quantized.cpp:58: Quantize model done!

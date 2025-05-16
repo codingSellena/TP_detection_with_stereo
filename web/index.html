@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 保持原有样式不变 -->
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; }
+        .results { margin-top: 20px; }
+        .item { background: #fff; padding: 15px; margin-bottom: 10px; border-radius: 5px; }
+        h3 { margin: 0 0 5px 0; color: #333; }
+        p { margin: 3px 0; color: #666; }
+        .error { color: #d32f2f; }
+        .no-data { color: #757575; }
+    </style>
+</head>
+<body>
+    <h1>Object Detection Results</h1>
+    <div id="result"><p>Loading...</p></div>
+
+   <script>
+	async function fetchInferenceResult() {
+		try {
+			const response = await fetch("/infer");
+			//const response = await fetch("http://172.20.10.4:8000/infer");
+
+			if (!response.ok) throw new Error(`Server returned ${response.status}`);
+
+			const contentType = response.headers.get('content-type');
+			if (!contentType || !contentType.includes('application/json')) {
+				throw new Error("Invalid content type");
+			}
+
+			const result = await response.json();
+			console.log("Received:", result);
+
+			const container = document.getElementById("result");
+			let html = "";
+
+			// ① 处理 message 字段（明确无数据）
+			if (result.message && result.message === "No data available") {
+				html = `<p class="no-data">[No data available]</p>`;
+			}
+			// ② 处理 objects 存在时的情况
+			else if (Array.isArray(result.objects) && result.objects.length > 0) {
+				const validObjects = result.objects.filter(obj => obj.score > 0);
+				if (validObjects.length === 0) {
+					html = `<p class="no-data">[Result Waiting] (${result.timestamp || ''})</p>`;
+				} else {
+					html += '<div class="results">';
+					validObjects.forEach(item => {
+						html += `
+							<div class="item">
+								<h3>${item.object} (${(item.score * 100).toFixed(1)}%)</h3>
+								<p>Depth: ${item.depth >= 0 ? item.depth.toFixed(2) + 'm' : 'N/A'}</p>
+								<p>Time: ${item.timestamp}</p>
+							</div>
+						`;
+					});
+					html += '</div>';
+				}
+			}
+			// ③ 处理只有 status + timestamp 的情况
+			else if (result.status === "ok") {
+				html = `<p class="no-data">[Result Waiting] (${result.timestamp})</p>`;
+			}
+			// ④ 兜底：未知结构
+			else {
+				html = `<p class="no-data">[No recognizable data]</p>`;
+			}
+
+			container.innerHTML = html;
+
+		} catch (error) {
+			console.error("Fetch failed:", error);
+			document.getElementById("result").innerHTML =
+				`<p class="error">Error: ${error.message}</p>`;
+		}
+	}
+
+	fetchInferenceResult();
+	setInterval(fetchInferenceResult, 2000);
+	</script>
+
+
+
+</body>
+</html>
